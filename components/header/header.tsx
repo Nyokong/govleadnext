@@ -1,7 +1,15 @@
 /**Mobile first approach */
 
 import Signin from "./signin";
+
+/** icons */
 import { AiOutlineMenu } from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa6";
 
 /** Sheet menu  */
 import {
@@ -12,6 +20,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
+/** components  */
+import { Separator } from "@/components/ui/separator";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 
 export const Header = () => {
   return (
@@ -27,20 +41,63 @@ export const Header = () => {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Are you absolutely sure?</SheetTitle>
-                <SheetDescription>
-                  This action cannot be undone. This will permanently delete
-                  your account and remove your data from our servers.
-                </SheetDescription>
+                <SheetTitle>side menu</SheetTitle>
+                {/* <SheetDescription>side menu</SheetDescription> */}
               </SheetHeader>
+              <div className="grid flex-1 auto-rows-min gap-6 px-4">
+                <div className="side-menu-class flex flex-row items-center justify-around">
+                  <Input
+                    className="w-[230px] h-[40px]"
+                    placeholder="Search the site..."
+                  />
+                  <Button className="flex justify-center items-center h-[40px] w-[40px] px-2">
+                    <FaSearch />
+                  </Button>
+                </div>
+                <Separator />
+
+                <div className="side-menu-class grid gap-3">
+                  <Label htmlFor="sheet-demo-username">Incubation</Label>
+                </div>
+
+                <Separator />
+
+                <div className="side-menu-class grid gap-3">
+                  <Label htmlFor="sheet-demo-username">Enterpreneurs</Label>
+                </div>
+
+                <Separator />
+
+                <div className="side-menu-class grid gap-3">
+                  <Label htmlFor="sheet-demo-username">Clients</Label>
+                </div>
+
+                <Separator />
+
+                <div className="side-menu-class grid gap-3">
+                  <Label htmlFor="sheet-demo-username">Moderators</Label>
+                </div>
+
+                <Separator />
+
+                <div className="side-menu-class grid gap-3">
+                  <Label htmlFor="sheet-demo-name">About Us</Label>
+                  {/* <div>
+                  <Signin />
+                </div> */}
+                  <div className="flex flex-row items-center justify-end">
+                    <FaWhatsappSquare color="#25D366" />
+                    <FaFacebookSquare color="#4267B2" />
+                    <FaInstagramSquare color="#f56040" />
+                    <FaTwitterSquare color="#1D9BF0" />
+                  </div>
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
         <div className="bg-none w-full h-[70px] flex items-center justify-center">
           logo goes here
-          <div>
-            <Signin />
-          </div>
         </div>
       </div>
     </div>

@@ -120,3 +120,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+.side-menu-class {
+  height: auto;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  font-size: 30px;
+}
+
+.side-menu-class label {
+  font-size: 15px;
+}
