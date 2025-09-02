@@ -31,8 +31,8 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <div className="w-full h-[105px] flex flex-col items-center ">
-      <div className="flex flex-row justify-center items-center text-[10px] h-[35px] bg-green-600 w-full text-white">
+    <div className="fixed z-10 w-full h-[120px] flex flex-col items-center bg-white">
+      <div className="flex flex-row justify-center items-center text-[10px] h-[40px] bg-green-600 w-full text-white">
         <span className="mx-2">reach GovLead Management Here: </span>
         <Link href={'govern@govlead.co.za'} className="text-white">
           govern@govlead.co.za
@@ -99,7 +99,7 @@ export const Header = () => {
           </Sheet>
         </div>
         <div className="bg-none w-full h-[70px] flex items-center justify-left mx-[25px]">
-          <Image src="./Full_Logo.svg" alt="logo optimized" width={100} height={100} />
+          <Image src="./Full_Logo.svg" alt="logo optimized" width={150} height={150} />
         </div>
       </div>
       {/* <div className="h-[35px] flex justify-center items-center">
