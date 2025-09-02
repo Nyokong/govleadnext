@@ -131,3 +131,19 @@
 .side-menu-class label {
   font-size: 15px;
 }
+
+.input-varient {
+  height: 40px;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+}
+
+.input-varient:hover {
+  border: 0;
+  border-radius: 0;
+}

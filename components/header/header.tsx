@@ -99,7 +99,9 @@ export const Header = () => {
           </Sheet>
         </div>
         <div className="bg-none w-full h-[70px] flex items-center justify-left mx-[25px]">
-          <Image src="./Full_Logo.svg" alt="logo optimized" width={150} height={150} />
+          <Link href={'/'}>
+            <Image src="./Full_Logo.svg" alt="logo optimized" width={150} height={150} />
+          </Link>
         </div>
       </div>
       {/* <div className="h-[35px] flex justify-center items-center">

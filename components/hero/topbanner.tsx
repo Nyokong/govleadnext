@@ -4,6 +4,7 @@ import { FaAsterisk } from 'react-icons/fa';
 import { HiAcademicCap } from 'react-icons/hi';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Topbanner() {
   return (
@@ -46,9 +47,11 @@ export default function Topbanner() {
                 Join us Today!
               </span>
               <span className="w-full flex justify-center items-center ">
-                <Button className="h-[60px] w-[250px] bg-orange-400 text-black rounded-none ">
-                  Join Now
-                </Button>
+                <Link href="/joinnow">
+                  <Button className="h-[60px] w-[250px] bg-orange-400 text-black rounded-none ">
+                    Join Now
+                  </Button>
+                </Link>
               </span>
               <div className="flex flex-row h-auto p-4 w-full justify-center gap-2 mt-4">
                 <span className="h-[10px] w-[10px] rounded-full bg-green-400"></span>
