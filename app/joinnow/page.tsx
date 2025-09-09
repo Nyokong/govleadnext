@@ -18,25 +18,39 @@ export default function Page() {
         </div>
 
         <motion.div
-          initial={{ scale: 0.5 }}
-          animate={{ scale: 1 }}
+          initial={{ scale: 0.8, opacity: 0.2 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{
-            duration: 0.8,
+            duration: 0.6,
             scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
           }}
           className="w-full h-auto"
         >
           <form action="" className="px-5 flex flex-col items-center">
             <Label className="italic opacity-65 mb-2 mt-4">We cant wait to hear from you!</Label>
-            <div>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0.2 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 0.7,
+                scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+              }}
+            >
               <Input className="input-varient" placeholder="Enter your name..." />
               <Input className="input-varient" placeholder="Enter your surname..." />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0.2 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 1,
+                scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+              }}
+            >
               <Input className="input-varient" placeholder="Enter your email..." />
               <Input className="input-varient" placeholder="Enter contact email.." />
-            </div>
+            </motion.div>
             <Button className="h-[60px] w-[250px]">Submit</Button>
           </form>
         </motion.div>

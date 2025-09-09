@@ -51,8 +51,11 @@ export const Header = () => {
               </SheetHeader>
               <div className="grid flex-1 auto-rows-min gap-6 px-4">
                 <div className="side-menu-class flex flex-row items-center justify-around">
-                  <Input className="w-[230px] h-[40px]" placeholder="Search the site..." />
-                  <Button className="flex justify-center items-center h-[40px] w-[40px] px-2">
+                  <Input
+                    className="w-[200px] h-[40px] border-0 rounded-none"
+                    placeholder="Search the site..."
+                  />
+                  <Button className="flex justify-center items-center h-[40px] w-[40px] rounded-none ">
                     <FaSearch />
                   </Button>
                 </div>

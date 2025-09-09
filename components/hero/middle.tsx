@@ -1,11 +1,20 @@
 import { Separator } from '../ui/separator';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 
+import * as motion from 'motion/react-client';
+
 import Image from 'next/image';
 
 export default function Middle() {
   return (
-    <div>
+    <motion.div
+      initial={{ scale: 0.6, opacity: 0.8 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{
+        duration: 0.6,
+        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+      }}
+    >
       <div className="md:hidden flex flex-col h-auto w-[95%] mx-[2.5%] mt-4 relative">
         {/* <div className="flex justify-center items-center bg-gray-200 h-[150px] w-[100%] mt-4">
         <div>Image placeholder</div>
@@ -46,6 +55,6 @@ export default function Middle() {
         </div> */}
       </div>
       <div className="hidden md:block">Middle Section Media On large Screen</div>
-    </div>
+    </motion.div>
   );
 }
