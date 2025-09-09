@@ -21,8 +21,8 @@ export default function Topbanner() {
               className="w-full h-full object-cover "
               src="/Hero_1.jpg"
               alt="Hero Image optimized"
-              width={612}
-              height={371}
+              width={2975}
+              height={1960}
             />
           </div>
 
@@ -37,7 +37,9 @@ export default function Topbanner() {
               <span className="font-extrabold text-2xl">
                 IncuVera Entrepreneur Incubation Program
               </span>{' '}
-              <span className="font-light">Empowering Entrepreneurs, Creating Jobs”</span>
+              <span className="font-light">
+                Empowering Entrepreneurs, Creating Jobs”
+              </span>
             </h1>
 
             {/* <Separator /> */}

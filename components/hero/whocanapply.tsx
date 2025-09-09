@@ -8,8 +8,8 @@ export default function Whocanapply() {
       initial={{ scale: 0.6, opacity: 0.8 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{
-        duration: 0.6,
-        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+        duration: 0.2,
+        scale: { type: 'spring', visualDuration: 0.2, bounce: 0.3 },
       }}
       className=""
     >
@@ -26,16 +26,16 @@ export default function Whocanapply() {
           <li className="h-auto w-full p-4 rounded-2xl bg-[#dbdbdb]">
             {/* <span>Stages:</span>{' '} */}
             <span>
-              Idea stage, early-stage entrepreneurs (0–2 years), small & growing businesses (2–5
-              years)
+              Idea stage, early-stage entrepreneurs (0–2 years), small & growing
+              businesses (2–5 years)
             </span>
           </li>
 
           <li className="h-auto w-full p-4 rounded-2xl">
             {/* <span>Sectors:</span>{' '} */}
             <span>
-              Service-based businesses, small-scale manufacturing, agriculture, tech startups,
-              community-based enterprises
+              Service-based businesses, small-scale manufacturing, agriculture,
+              tech startups, community-based enterprises
             </span>
           </li>
         </ul>

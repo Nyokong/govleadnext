@@ -11,8 +11,8 @@ export default function Middle() {
       initial={{ scale: 0.6, opacity: 0.8 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{
-        duration: 0.6,
-        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+        duration: 0.2,
+        scale: { type: 'spring', visualDuration: 0.1, bounce: 0.2 },
       }}
     >
       <div className="md:hidden flex flex-col h-auto w-[95%] mx-[2.5%] mt-4 relative">
@@ -20,8 +20,8 @@ export default function Middle() {
         <div>Image placeholder</div>
       </div> */}
 
-        <div className="absolute top-[15px] left-[0px] p-4 w-full flex flex-row gap-1 bg-gradient-to-b from-[#000000c2] to-transparent rounded-2xl">
-          <div className="mr-1.5 h-[40px] w-[40px] flex justify-center items-center rounded-full bg-green-400">
+        <div className="absolute top-[15px] left-[0px] p-4 w-full flex flex-row gap-1 bg-gradient-to-b from-[#333336] to-transparent ">
+          <div className="mr-1.5 h-[40px] w-[40px] flex justify-center items-center rounded-full bg-[#333336]">
             <FaAngleDoubleDown color="white" />
           </div>
           <h1 className="font-semibold text-1xl text-center flex items-center text-white">
@@ -31,7 +31,7 @@ export default function Middle() {
 
         <Separator />
 
-        <div className="flex justify-center items-center overflow-hidden rounded-2xl bg-gray-200 h-[330px] w-[100%] mt-4">
+        <div className="flex justify-center items-center overflow-hidden  bg-gray-200 h-[330px] w-[100%] mt-4">
           <Image
             className="w-full h-full object-cover "
             src="/Sec_1.png"
@@ -54,7 +54,9 @@ export default function Middle() {
           <span>Training, Mentorship, Seed Funding</span>
         </div> */}
       </div>
-      <div className="hidden md:block">Middle Section Media On large Screen</div>
+      <div className="hidden md:block">
+        Middle Section Media On large Screen
+      </div>
     </motion.div>
   );
 }
