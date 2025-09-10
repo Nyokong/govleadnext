@@ -9,6 +9,7 @@ import Whocanapply from '@/components/hero/whocanapply';
 import Rowsection from '@/components/hero/rowsection';
 import Image_1 from '@/components/hero/image_1';
 import Proposition from '@/components/hero/proposition';
+import What from '@/components/hero/what';
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <Header />
 
       <Topbanner />
+      <br />
+      <What />
       <br />
       <Rowsection />
       <Middle />

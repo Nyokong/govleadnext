@@ -147,3 +147,7 @@
   border: 0;
   border-radius: 0;
 }
+
+.menu-item-cur {
+  cursor: pointer;
+}

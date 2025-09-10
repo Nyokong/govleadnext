@@ -21,6 +21,18 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 
+/** Navigation Menu */
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from '@/components/ui/navigation-menu';
+
 /** components  */
 import { Separator } from '@/components/ui/separator';
 import { Label } from '../ui/label';
@@ -38,8 +50,18 @@ export const Header = () => {
           govern@govlead.co.za
         </Link>
       </div>
+
+      {/** Entrepreneurs
+       * Investors
+       * Mentors
+       * Resources
+       * Services
+       * About
+       */}
+
       <div className="flex flex-row-reverse w-full justify-between">
-        <div className="bg-none h-[70px] w-[70px] flex items-center justify-center mx-[25px]">
+        {/** Small menu Navigation */}
+        <div className="bg-none h-[70px] w-[70px] flex items-center justify-center mx-[25px] md:hidden">
           <Sheet>
             <SheetTrigger>
               <AiOutlineMenu size={25} />
@@ -62,25 +84,31 @@ export const Header = () => {
                 <Separator />
 
                 <div className="side-menu-class grid gap-3">
-                  <Label htmlFor="sheet-demo-username">Incubation</Label>
+                  <Label htmlFor="sheet-demo-username">Entrepreneurs</Label>
                 </div>
 
                 <Separator />
 
                 <div className="side-menu-class grid gap-3">
-                  <Label htmlFor="sheet-demo-username">Enterpreneurs</Label>
+                  <Label htmlFor="sheet-demo-username">Investors</Label>
                 </div>
 
                 <Separator />
 
                 <div className="side-menu-class grid gap-3">
-                  <Label htmlFor="sheet-demo-username">Clients</Label>
+                  <Label htmlFor="sheet-demo-username">Mentors</Label>
                 </div>
 
                 <Separator />
 
                 <div className="side-menu-class grid gap-3">
-                  <Label htmlFor="sheet-demo-username">Moderators</Label>
+                  <Label htmlFor="sheet-demo-username">Services</Label>
+                </div>
+
+                <Separator />
+
+                <div className="side-menu-class grid gap-3">
+                  <Label htmlFor="sheet-demo-username">Resources</Label>
                 </div>
 
                 <Separator />
@@ -101,16 +129,95 @@ export const Header = () => {
             </SheetContent>
           </Sheet>
         </div>
-        <div className="bg-none w-full h-[70px] flex items-center justify-left mx-[25px]">
+
+        {/** Large menu Navigation */}
+        <div className="hidden md:flex md:flex-row justify-end items-center gap-2 px-4 w-auto md:w-[900px] h-[60px]">
+          {/* <span className="flex flex-row gap-2 items-center">
+            <div className="side-menu-class flex flex-row gap-2 items-center justify-around">
+              <Input
+                className="w-[200px] h-[40px] border-0 rounded-none"
+                placeholder="Search the site..."
+              />
+              <Button className="flex justify-center items-center h-[40px] w-[40px] rounded-none ">
+                <FaSearch />
+              </Button>
+            </div>
+          </span> */}
+
+          <NavigationMenu viewport={false}>
+            <NavigationMenuList>
+              <NavigationMenuItem className="bg-[#e6e6e6] text-[13px] font-semibold flex justify-center items-center h-[40px] w-auto px-4 rounded-none menu-item-cur">
+                Entrepreneurs
+              </NavigationMenuItem>
+              <NavigationMenuItem className="bg-[#e6e6e6] text-[13px] font-semibold flex justify-center items-center h-[40px] w-auto px-4 rounded-none menu-item-cur">
+                Investors
+              </NavigationMenuItem>
+              <NavigationMenuItem></NavigationMenuItem>
+              <NavigationMenuItem className="bg-[#e6e6e6] hidden lg:flex text-[13px] font-semibold md:flex justify-center items-center h-[40px] w-auto px-4 rounded-none menu-item-cur">
+                Mentors
+              </NavigationMenuItem>
+              <NavigationMenuItem className="hidden lg:block">
+                <NavigationMenuTrigger className="rounded-none h-[40px] menu-item-cur">
+                  Resources
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link href="#">Components</Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="#">Documentation</Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="#">Blocks</Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="rounded-none h-[40px] menu-item-cur">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link href="#" className="flex-row items-center gap-2">
+                          Backlog
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="#" className="flex-row items-center gap-2">
+                          To Do
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="#" className="flex-row items-center gap-2">
+                          Done
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        {/** Logo on header */}
+        <div className="bg-none w-auto h-[70px] flex items-center justify-left mx-[25px]">
           <Link href={'/'}>
-            <Image src="./Full_Logo.svg" alt="logo optimized" width={150} height={150} />
+            <Image
+              src="./Full_Logo.svg"
+              alt="logo optimized"
+              width={150}
+              height={150}
+            />
           </Link>
         </div>
       </div>
-      {/* <div className="h-[35px] flex justify-center items-center">
-        <p>Want to get on with it?</p>
-        <Button className="bg-transparent text-black h-[30px] b-none">Apply now</Button>
-      </div> */}
     </div>
   );
 };

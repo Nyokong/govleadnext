@@ -6,11 +6,22 @@ import { HiAcademicCap } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import * as motion from 'motion/react-client';
+
 export default function Topbanner() {
   return (
     <div>
       <div className="h-[120px] w-full"></div>
-      <div className="md:hidden">
+      <motion.div
+        initial={{ scale: 0.6, opacity: 0.8 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{
+          duration: 0.2,
+          ease: ['easeIn', 'easeOut'],
+          scale: { type: 'spring', visualDuration: 0.1, bounce: 0.2 },
+        }}
+        className="md:hidden  bg-[#f0f0f0] w-full pb-4"
+      >
         <div className="flex flex-col-reverse h-auto w-[95%] mx-[2.5%] relative">
           {/* <Separator className="mt-3" /> */}
 
@@ -48,25 +59,70 @@ export default function Topbanner() {
               <span className="h-[40px] w-full flex justify-center items-center my-2 font-bold text-3xl text-green-500">
                 Join us Today!
               </span>
-              <span className="w-full flex justify-center items-center ">
+              <span className="w-full flex justify-center items-center mb-4 ">
                 <Link href="/joinnow">
                   <Button className="h-[60px] w-[250px] bg-orange-400 text-black rounded-none ">
                     Join Now
                   </Button>
                 </Link>
               </span>
-              <div className="flex flex-row h-auto p-4 w-full justify-center gap-2 mt-4">
+              {/* <div className="flex flex-row h-auto p-4 w-full justify-center gap-2 mt-4">
                 <span className="h-[10px] w-[10px] rounded-full bg-green-400"></span>
                 <span className="h-[10px] w-[10px] rounded-full bg-white"></span>
                 <span className="h-[10px] w-[10px] rounded-full bg-white"></span>
                 <span className="h-[10px] w-[10px] rounded-full bg-white"></span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="hidden md:block">Top Section Large Screens</div>
+      <motion.div
+        initial={{ scale: 0.6, opacity: 0.8 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{
+          duration: 0.2,
+          scale: { type: 'spring', visualDuration: 0.1, bounce: 0.2 },
+        }}
+        className="hidden md:block bg-[#f0f0f0] w-full pb-4"
+      >
+        <div className="flex flex-row-reverse items-center justify-center ">
+          <div className="flex justify-center items-center bg-gray-200 h-[400px] w-[350px] mt-4 rounded-2xl overflow-hidden">
+            {/* <div>Image placeholder</div> */}
+            <Image
+              className="w-full h-full object-cover "
+              src="/Hero_1.jpg"
+              alt="Hero Image optimized"
+              width={2975}
+              height={1960}
+            />
+          </div>
+          <div className="p-2 mr-2">
+            <h1 className="h-[100px] flex items-center text-4xl font-bold">
+              Welcome
+            </h1>
+
+            <h1 className="my-1  text-black flex flex-col w-[300px]">
+              <span className="font-extrabold text-2xl">
+                IncuVera Entrepreneur Incubation Program
+              </span>{' '}
+              <span className="font-light">
+                Empowering Entrepreneurs, Creating Jobs”
+              </span>
+            </h1>
+            <p className="w-[300px]">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              fugit ab nesciunt eveniet assumenda sunt totam sed recusandae
+              voluptate veritatis? Voluptate!
+            </p>
+            <div>
+              <Button className="h-[50px] w-[160px] mt-2 rounded-none bg-[#303030] text-white flex justify-center">
+                Apply Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
