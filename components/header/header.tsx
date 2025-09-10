@@ -131,7 +131,7 @@ export const Header = () => {
         </div>
 
         {/** Large menu Navigation */}
-        <div className="hidden md:flex md:flex-row justify-end items-center gap-2 px-4 w-auto md:w-[900px] h-[60px]">
+        <div className="hidden md:flex md:flex-row justify-end items-center gap-2 pr-6 w-auto md:w-[900px] h-[60px]">
           {/* <span className="flex flex-row gap-2 items-center">
             <div className="side-menu-class flex flex-row gap-2 items-center justify-around">
               <Input
@@ -185,17 +185,22 @@ export const Header = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link href="#" className="flex-row items-center gap-2">
-                          Backlog
+                          Resources
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
                         <Link href="#" className="flex-row items-center gap-2">
-                          To Do
+                          Mentors
                         </Link>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
                         <Link href="#" className="flex-row items-center gap-2">
-                          Done
+                          Consultations
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <Link href="#" className="flex-row items-center gap-2">
+                          Reporting
                         </Link>
                       </NavigationMenuLink>
                     </li>
