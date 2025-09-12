@@ -203,6 +203,9 @@ export const Header = () => {
                           Reporting
                         </Link>
                       </NavigationMenuLink>
+                      <NavigationMenuItem className="bg-[#e6e6e6] hidden lg:flex text-[13px] font-semibold md:flex justify-center items-center h-[40px] w-auto px-4 rounded-none menu-item-cur">
+                        About Us
+                      </NavigationMenuItem>
                     </li>
                   </ul>
                 </NavigationMenuContent>
